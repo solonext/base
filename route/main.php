@@ -1,7 +1,8 @@
 <?php
 $a = array(
-    "test" => 'sd',
-    "test2" => 'as'
+    "var1" => 'sd',
+    "var2" => 'as',
+    "var3" => 'as'
 );
 
 $data = url("index","index", ['why' => $a]);
