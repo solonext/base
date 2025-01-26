@@ -15,17 +15,22 @@ class URL
     {
 
         if (isset($_GET['data'])) {
-            $dataarray = explode("/", $_GET['data']);
-            $array = array('set' => true, 'value' => $dataarray[0]);
+            $url_link = explode("/", $_GET['data']);
 
-            if($dataarray[0]==$route){
-              if(file_exists('pages/'.$require.'.blade.php')){
-                include_once('pages/'.$require.'.blade.php');
-              }
-              else{
-                include_once('pages/404.blade.php');
+            foreach ($url_link as $partofurl) {
+              if($partofurl==$route){
+                if(file_exists('pages/'.$require.'.blade.php')){
+                  include_once('pages/'.$require.'.blade.php');
+                  break;
+                }
+                else{
+                  include_once('pages/404.blade.php');
+                  break;
+                }
               }
             }
+
+            
         }
     }
 
