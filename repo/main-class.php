@@ -16,7 +16,10 @@ class URL
 
         if (isset($_GET['data'])) {
             $url_link = explode("/", $_GET['data']);
-
+            if (!$url_link) {
+              // list is empty.
+              include_once('pages/404.blade.php');
+            }
             foreach ($url_link as $partofurl) {
               if($partofurl==$route){
                 if(file_exists('pages/'.$require.'.blade.php')){
