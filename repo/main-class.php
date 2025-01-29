@@ -35,6 +35,7 @@ class URL
         }
     }
 
+    
     function with($data)
     {
         $this->data = $data;
