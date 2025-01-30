@@ -11,6 +11,7 @@ class URL
 
     public $data = array();
 
+    
     function __construct($route,$require,$data)
     {
 
@@ -34,6 +35,7 @@ class URL
             }
         }
     }
+
 
     
     function with($data)
