@@ -7,5 +7,5 @@ $a = array(
 
 $data = url("index","index", ['why' => $a]);
 
-
+echo 'Add mishe';
 ?>
