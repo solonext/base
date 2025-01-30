@@ -14,7 +14,7 @@ class URL
     
     function __construct($route,$require,$data)
     {
-
+      
         if (isset($_GET['data'])) {
             $url_link = explode("/", $_GET['data']);
             if (!$url_link) {
@@ -22,16 +22,21 @@ class URL
               include_once('pages/404.blade.php');
             }
             foreach ($url_link as $partofurl) {
+              
               if($partofurl==$route){
-                if(file_exists('pages/'.$require.'.blade.php')){
-                  include_once('pages/'.$require.'.blade.php');
+                if(file_exists('pages/'.$partofurl.'.blade.php')){
+                  include_once('pages/'.$partofurl.'.blade.php');
                   break;
                 }
                 else{
                   include_once('pages/404.blade.php');
                   break;
                 }
+              }////outofrout
+              else{
+                include_once('pages/404.blade.php');
               }
+
             }
         }
     }
