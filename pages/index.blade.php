@@ -7,6 +7,6 @@
 </head>
 <body>
     <h1>HI</h1>
-    <h2><?php       print_r($data); ?></h2>
+    <h2><?php  print_r("index"); ?></h2>
 </body>
 </html>

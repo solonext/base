@@ -5,6 +5,8 @@ $a = array(
     "var3" => 'as'
 );
 
-$data = url("asddasd","index", ['why' => $a]);
+//$data = url("asddasd","index", ['why' => $a]);
+
+$data = url("sdsa","bootstrap5", ['why' => $a]);
 
 ?>

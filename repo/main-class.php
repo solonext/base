@@ -24,8 +24,8 @@ class URL
             foreach ($url_link as $partofurl) {
               
               if($partofurl==$route){
-                if(file_exists('pages/'.$partofurl.'.blade.php')){
-                  include_once('pages/'.$partofurl.'.blade.php');
+                if(file_exists('pages/'.$require.'.blade.php')){
+                  include_once('pages/'.$require.'.blade.php');
                   break;
                 }
                 else{
